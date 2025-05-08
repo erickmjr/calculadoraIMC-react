@@ -1,58 +1,51 @@
-import { useEffect } from 'react';
 import styles from './ImcTable.module.scss';
 
-function ImcTable (imc) {
-    
-    useEffect(() => {
-        if(imc <= 18,5) {
-            
-        }
-    }, [imc])
+function ImcTable ({imc}) {
 
     return (
         <>
             <div className={styles.table}>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
+                <div className={`${imc <= 18.5 ? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
                         ≤ 18,5 
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Below ideal weight</p>
                 </div>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
+                <div className={`${(imc >= 18.5 && imc <= 24.99) ? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
                         18,5 - 24,9
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Ideal weight</p>
                 </div>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
+                <div className={`${(imc >= 25 && imc <= 29.99) ? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
                         25,0 - 29,9
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Below ideal weight</p>
                 </div>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
+                <div className={`${(imc >= 30 && imc <= 34.99)? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
                         30,0 - 34,9 
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Below ideal weight</p>
                 </div>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
+                <div className={`${(imc >= 35 && imc <= 39.99) ? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
                         35,0 - 39,9
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Below ideal weight</p>
                 </div>
 
-                <div className={styles.table__item}>
-                    <h3 className={styles.table__item__title}>
-                        40,0 ≥ 
+                <div className={`${imc >= 40 ? styles['table__item-is--active'] : styles['table__item']}`}>
+                    <h3>
+                        ≥ 40,0  
                     </h3>
-                    <p className={styles.table__item__text}>Below ideal weight</p>
+                    <p>Below ideal weight</p>
                 </div>
 
             </div>

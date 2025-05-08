@@ -5,20 +5,13 @@ import CalculadoraForm from './components/CalculadoraForm';
 import Resultado from './components/Resultado';
 import ImcTable from './components/ImcTable';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
   const [imc, setImc] = useState(0)
-
-  useEffect(() => {
-
-    console.log(height);
-    console.log(weight);
-
-  }, [weight, height])
 
   return (
     <>
@@ -38,7 +31,7 @@ function App() {
       
       }
 
-      <ImcTable />
+      <ImcTable imc={imc}/>
     </>
   )
 }
