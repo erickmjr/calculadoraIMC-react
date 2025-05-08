@@ -1,0 +1,17 @@
+@use './variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: variables.$principalFont;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: variables.$background-color;
+}

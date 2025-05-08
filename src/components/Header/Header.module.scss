@@ -1,0 +1,9 @@
+@use '../../assets/styles/variables';
+
+.header {
+    background-color: variables.$wine;
+    padding: 5dvh;
+    text-align: center;
+    text-transform: uppercase;
+    color: variables.$secondaryColor;
+}

@@ -1,0 +1,30 @@
+@use '../../assets/styles/variables';
+
+.container {
+    margin: 5dvh auto;
+
+    &__form {
+
+        display: flex;
+        gap: 2dvh;
+
+        .containerItem {
+            display: flex;
+            flex-direction: column;
+            gap: 1dvh;
+            
+            label {
+                font-weight: bold;
+            }
+        }
+
+        &__input {
+            all: unset;
+            padding: 1.5dvh;
+            background-color: variables.$primaryColor;
+            color: variables.$secondaryColor;
+            border: 2px solid variables.$wine;
+            border-radius: 6px 0 6px 0;
+        }
+    }
+}

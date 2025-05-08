@@ -1,0 +1,23 @@
+@use '../../assets/styles/variables';
+
+.table {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1dvh;
+    background-color: variables.$wine;
+    padding: 3dvh;
+    border-radius: 9px 0 9px 0;
+
+    &__item {
+        color: variables.$secondaryColor;
+        border: 2px solid variables.$secondaryColor;
+        padding: 1.5dvh;
+        border-radius: 4px;
+
+        &--is-active {
+            background-color: variables.$secondaryColor;
+            color: variables.$wine;
+        }
+    }
+}
