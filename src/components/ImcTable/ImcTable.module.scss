@@ -15,9 +15,12 @@
         padding: 1.5dvh;
         border-radius: 4px;
 
-        &--is-active {
+        &-is--active {  
+            transition: background-color .6s ease, color .6s ease ;
             background-color: variables.$secondaryColor;
             color: variables.$wine;
+            padding: 1.5dvh;
+            border-radius: 4px;
         }
     }
 }
